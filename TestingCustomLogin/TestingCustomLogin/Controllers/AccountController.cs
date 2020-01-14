@@ -16,7 +16,7 @@ namespace TestingCustomLogin.Controllers
         // GET: Account
         public ActionResult Index()
         {
-            return View();
+            return Redirect("home/index");
         }
         [HttpGet]
         public ActionResult Login(string ReturnUrl = "")
@@ -26,7 +26,7 @@ namespace TestingCustomLogin.Controllers
                 return LogOut();
             }
             ViewBag.ReturnUrl = ReturnUrl;
-            return View();
+            return View(new LoginView());
         }
 
         [HttpPost]
