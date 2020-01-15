@@ -104,6 +104,7 @@ namespace TestingCustomLogin.Controllers
                         LastName = registrationView.LastName,
                         Email = registrationView.Email,
                         Password = registrationView.Password,
+                        IsActive = true,
                         ActivationCode = Guid.NewGuid(),
                     };
 
@@ -112,7 +113,7 @@ namespace TestingCustomLogin.Controllers
                 }
 
                 //Verification Email  
-                VerificationEmail(registrationView.Email, registrationView.ActivationCode.ToString());
+               // VerificationEmail(registrationView.Email, registrationView.ActivationCode.ToString());
                 messageRegistration = "Your account has been created successfully. ^_^";
                 statusRegistration = true;
             }
